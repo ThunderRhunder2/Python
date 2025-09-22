@@ -1,0 +1,10 @@
+def main():
+  sumA = int(intput("Input the first number:")
+  sumB = int(input("Input the second number:")
+  if sumA <= sumB:  #I tried to use the least amount of if conditions as code could become messy
+    if sumA = sumB:
+      print(f"{sumA} = {sumB}")  #This describes that sumA is equal to sumB
+    else:
+      print(f"{sumA} < {sumB}")
+  else:
+    print(f"{sumA} > {sumB}")
