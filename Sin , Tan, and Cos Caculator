@@ -1,0 +1,22 @@
+import math
+
+def main():
+  x_angle = 0
+  opp = 0
+  adj = 0
+  hyp = 0
+  print("The response is not perfect so when is states ^sine^ type ^sine^")
+  choice = input("Are you using sine, tangent, or cosine:")
+  if choice == "sine":
+    icicle = input("Are you finding a missing angle or side:")
+    if icicle == "angle":
+      hyp = int(input("Input the hypotenuse:"))
+      opp = int(input("Input the oppisite:"))
+      x = opp/hyp
+      x = math.radians(x)
+      print(math.sin(x))
+    else:
+      print("This means you atleast know hypotenuse")
+
+if __name__ == "__main__":
+    main()
