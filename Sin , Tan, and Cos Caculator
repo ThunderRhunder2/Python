@@ -1,22 +1,76 @@
 import math
+# Reminder use radians insted of degrees
+x_angle = 0
+opp = 0
+adj = 0
+hyp = 0
 
 def main():
-  x_angle = 0
-  opp = 0
-  adj = 0
-  hyp = 0
-  print("The response is not perfect so when is states ^sine^ type ^sine^")
-  choice = input("Are you using sine, tangent, or cosine:")
-  if choice == "sine":
-    icicle = input("Are you finding a missing angle or side:")
-    if icicle == "angle":
-      hyp = int(input("Input the hypotenuse:"))
-      opp = int(input("Input the oppisite:"))
-      x = opp/hyp
-      x = math.radians(x)
-      print(math.sin(x))
+    print("The response is not perfect so when is states ^sine^ type ^sine^")
+    choice = input("Are you using sine, tangent, or cosine: ")
+    if choice == "sine":
+        sine_cac()
+    elif choice == "cosine":
+        cosine_cac()
+    elif choice == "tangent":
+        tangent_cac()
     else:
-      print("This means you atleast know hypotenuse")
+        print("This is a sine, cosine, and tangent caculator")
+
+
+
+
+def sine_cac():
+    icicle = input("Are you finding a missing angle or side: ")
+    if icicle == "angle": #This input is correct
+        hyp = int(input("Input the hypotenuse: "))
+        opp = int(input("Input the oppisite: "))
+        x = opp / hyp
+        print(f"Your angle is {math.degrees(math.asin(x))}")
+    elif icicle == "side": #Correct and cleared
+        print("This means you atleast know hypotenuse and theta")
+        hyp = int(input("Enter the hypotenuse: "))
+        x_angle = int(input("Enter angle theta: "))
+        x_angle = math.radians(x_angle)
+        x_angle = math.sin(x_angle)
+        print(f"Your oppisite is {x_angle * hyp}")
+pass
+
+def cosine_cac():
+    pizza = input("Are you finding a missing angle or side: ")
+    if pizza == "side": # Passes with flying colors
+        hyp = int(input("Enter the hypotenuse: "))
+        x_angle = int(input("Enter the theta: "))
+        x_angle = math.radians(x_angle)
+        x_angle = math.cos(x_angle)
+        print(f"Your adjcent is {x_angle * hyp}")
+    elif pizza == "angle": # This is correct
+        hyp = int(input("Input the hypotenuse: "))
+        adj = int(input("Input the adjacent: "))
+        x_angle = adj / hyp
+        print(f"Your adjacent is {math.degrees(math.acos(x_angle))}")
+pass
+
+def tangent_cac():
+    pasta = input("Are you finding a missing angle or side: ")
+    if pasta == "side": # Passes the test
+        opp = int(input("Enter the oppsite: "))
+        adj = int(input("Input the adjacent: "))
+        x_angle = opp / adj
+        print(f"Your angle is {math.degrees(math.atan(x_angle))}")
+
+    elif pasta == "angle": # Passes the test
+        adj = int(input("Enter the adjcent: "))
+        x_angle = int(input("Enter the theta: "))
+        x_angle = math.radians(x_angle)
+        x_angle = math.tan(x_angle)
+        print(f"Your oppisite is {x_angle * adj}")
+pass
+
+
+
+
+
 
 if __name__ == "__main__":
     main()
