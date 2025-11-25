@@ -1,0 +1,20 @@
+// Example program
+#include <iostream>
+#include <string>
+#include <vector>
+
+int main()
+{
+    int mass_kg = 0;
+    int lgth_m = 0;
+    int sec = 0;
+    std::cout << "What is the mass in Kg" << "\n";
+    std::cin >> mass_kg;
+    std::cout << "What is the length in meters" << "\n";
+    std::cin >> lgth_m;
+    std::cout << "What is the time in seconds" << "\n";
+    std::cin >> sec;
+    int force = (mass_kg * lgth_m) / (sec * sec);
+    std::cout << "The force is: " << force;
+    
+}
